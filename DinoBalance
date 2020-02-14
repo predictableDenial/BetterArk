@@ -35,5 +35,7 @@ TamedDinoClassResistanceMultipliers=(ClassName="MegaMek_Character_BP_C",Multipli
 TamedDinoClassDamageMultipliers=(ClassName="Mek_Character_BP_C",Multiplier=1)
 TamedDinoClassResistanceMultipliers=(ClassName="Mek_Character_BP_C",Multiplier=0.9)
 
-PreventDinoTameClassNames="Enforcer_Character_BP_C"
-PreventDinoTameClassNames="Procoptodon_Character_BP_C"
+PreventDinoTameClassNames="Gigant_Character_BP_C"
+PreventDinoTameClassNames="RockGolem_Character_BP_C"
+
+
