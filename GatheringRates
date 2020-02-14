@@ -1,7 +1,7 @@
 ;Custom harvest rate for each resource/item
 
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Crystal_C",Multiplier=11.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=0.1)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=0.6)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_C",Multiplier=10.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_Fish_C",Multiplier=10.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawPrimeMeat_C",Multiplier=10.0)
