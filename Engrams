@@ -1,0 +1,4 @@
+;Banned engrams and auto given engrams
+
+OverrideNamedEngramEntries=(EngramClassName="PrimalItemArmor_GachaSaddle_C",EngramHidden=true,EngramPointsCost=150,EngramLevelRequirement=60,RemoveEngramPreReq=false)
+OverrideNamedEngramEntries=(EngramClassName="PrimalItemArmor_ProcoptodonSaddle_C",EngramHidden=true,EngramPointsCost=150,EngramLevelRequirement=60,RemoveEngramPreReq=false)
