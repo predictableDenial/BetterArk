@@ -1,3 +1,5 @@
+;Custom stack amounts of items
+
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItem_WeaponBola_C",Quantity=(MaxItemQuantity=20,bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemAmmo_CompoundBowArrow_C",Quantity=(MaxItemQuantity=100,bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_SubstrateAbsorbent_C",Quantity=(MaxItemQuantity=8000,bIgnoreMultiplier=true))
