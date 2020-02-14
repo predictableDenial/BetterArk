@@ -18,6 +18,29 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TaxidermyTool_C",Engram
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Whip_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 
 
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_WeaponC4_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TreePlatformMetal_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Tapejara_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Canteen_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ZiplineMotor_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ModernBed_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SprayPainter_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalGateway_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalCliffPlatform_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Radio_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalSlopedWall_Left_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalSlopedWall_Right_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_GreenhouseSlopedWall_Left_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_GreenhouseSlopedWall_Right_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_HarpoonGun_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SimpleShotgun_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SimpleRifle_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Pistol_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ClimbingPick_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Sword_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalSickle_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+
+
 ;Armor
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalPants_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalShirt_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
