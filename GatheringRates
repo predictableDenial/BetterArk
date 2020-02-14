@@ -82,7 +82,7 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Preserv
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_RedSap_C",Multiplier=9.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Gem_Element_C",Multiplier=6.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Sand_C",Multiplier=10.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ScrapMetal_C",Multiplier=11.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ScrapMetal_C",Multiplier=0.6)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Silicate_C",Multiplier=10.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Silk_C",Multiplier=10.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Sulfur_C",Multiplier=10.0)
