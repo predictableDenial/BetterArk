@@ -18,3 +18,6 @@ ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Lava_Spa
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Lava_Upper_Spawn",NPCSpawnEntries=((AnEntryName="Lava_Upper_Golem",EntryWeight=0.02,NPCsToSpawnStrings=("RockGolem_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="RockGolem_Character_BP_C", MaxPercentageOfDesiredNumToAllow=0.035)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesMonsterIsland",NPCSpawnEntries=((AnEntryName="Monster_Island_Golem",EntryWeight=0.02,NPCsToSpawnStrings=("RockGolem_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="RockGolem_Character_BP_C", MaxPercentageOfDesiredNumToAllow=0.03)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesMountain",NPCSpawnEntries=((AnEntryName="Mountains_Mana",EntryWeight=0.015,NPCsToSpawnStrings=("IceJumper_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="IceJumper_Character_BP_C", MaxPercentageOfDesiredNumToAllow=0.025)))
+
+
+
