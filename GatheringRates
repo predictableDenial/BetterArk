@@ -1,7 +1,7 @@
 ;Custom harvest rate for each resource/item
 
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Crystal_C",Multiplier=11.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=11.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=0.1)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_C",Multiplier=10.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_Fish_C",Multiplier=10.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawPrimeMeat_C",Multiplier=10.0)
@@ -39,8 +39,8 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Charcoa
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Chitin_C",Multiplier=11.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ChitinOrKeratin_C",Multiplier=11.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ChitinPaste_C",Multiplier=11.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Element_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDust_C",Multiplier=5.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Element_C",Multiplier=2.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDust_C",Multiplier=2.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Fibers_C",Multiplier=11.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Flint_C",Multiplier=11.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Hair_C",Multiplier=10.0)
