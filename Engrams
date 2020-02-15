@@ -99,7 +99,6 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MekBackpack_Shield_C",E
 
 ;Saddles
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Allo_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
-OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Argentavis_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_BasiliskSaddle_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Basilosaurus_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Sauro_Platform_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
