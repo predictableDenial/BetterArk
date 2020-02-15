@@ -1,6 +1,8 @@
 ;Banned engrams and auto given engrams
 
 
+
+
 ;Tools
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_BloodExtractor_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Camera_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
@@ -16,6 +18,8 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_C",EngramHidden=true,En
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Scissors_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TaxidermyTool_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Whip_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+
+
 
 
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_WeaponC4_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
@@ -39,6 +43,8 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Pistol_C",EngramHidden=
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ClimbingPick_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Sword_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MetalSickle_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+
+
 
 
 ;Armor
@@ -89,6 +95,8 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MekBackpack_Cannon_C",E
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MekBackpack_Shield_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 
 
+
+
 ;Saddles
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Allo_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Argentavis_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
@@ -128,6 +136,8 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Tuso_C",EngramHi
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SpindlesSaddle_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Rhino_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Saddle_Yuty_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+
+
 
 
 ;Structures
@@ -277,10 +287,14 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_PowerCableVertical_C",E
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_WindTurbine_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 
 
+
+
 ;Consumables
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_CanteenCraftable_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_WaterJarCraftable_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MekSpawner_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+
+
 
 
 ;Weapons
@@ -325,6 +339,8 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Scope_C",EngramHidden=t
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Silencer_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 
 
+
+
 ;Ammunition
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_CannonShell_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_FlamethrowerAmmo_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
@@ -336,6 +352,8 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_AggroTranqDart_C",Engra
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TransGPSAmmo_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 
 
+
+
 ;Resources
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ChargeBattery_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SubstrateAbsorbent_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
@@ -343,3 +361,4 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Electronics_C",EngramHi
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Gunpowder_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Polymer_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Propellant_C",EngramHidden=true,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
+
