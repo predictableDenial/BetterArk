@@ -341,12 +341,10 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Silencer_C",EngramHidde
 
 
 ;Ammunition
-OverrideNamedEngramEntries=(EngramClassName="EngramEntry_CannonShell_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_FlamethrowerAmmo_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_C4Ammo_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_RocketHommingAmmo_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_RocketPod_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_RocketAmmo_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_AggroTranqDart_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
-OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TransGPSAmmo_C",EngramHidden=false,EngramPointsCost=9999,EngramLevelRequirement=999,RemoveEngramPreReq=true)
 
