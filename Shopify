@@ -1,12 +1,16 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 <div data-section-id="{{ section.id }}" data-section-type="product-page"  itemscope itemtype="http://schema.org/Product">
-<div id="opinew-rich-snippets-code-container">{{ product.metafields.opinew_metafields['rich_snippets'] }}</div>
+{% if product.metafields.loox.num_reviews %}
+	<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+		<meta itemprop="ratingValue" content="{{ product.metafields.loox.avg_rating }}"/>
+		<meta itemprop="reviewCount" content="{{ product.metafields.loox.num_reviews }}"/>
+	</div>
+{% endif %}
+
   <meta itemprop="name" content="{{ product.title }}">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: '800x' }}">
 
-  
-  
   <div class="row product-single js-animate-appear-show">
     {% case section.settings.images_width %}
       {% when '30' %}
@@ -32,6 +36,7 @@
               <a class="product__image__item" title="{{ image.alt | escape }}" href="{{ image | img_url: 'master' }}">
               {% else %}
               <div class="product__image__item">
+              <div class="product-badge badge__logo" style="width: 150px;"><img src="//cdn.shopify.com/s/files/1/0254/3357/1406/t/3/assets/mfc_transparent_black.png?1475" alt="Logo"></div>
               {% endif %}
                 <img class="lazyload {% if forloop.index == 1 %} __first-image {% endif %}"
                 src="{{ image | img_url: '300x300' }}"
@@ -60,15 +65,20 @@
       {% endif %}
     </div>
 
-    <div class="{{ product_info_grid }} product-card">
+    <div class="{{ product_info_grid }} product-card" style="border-left:1px solid lightgrey;">
       <div class="product-info__container">
         <h1 class="product-title" itemprop="name">{{ product.title }}</h1>
+        <a href="#looxReviews">
+		<div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}">
+		</div>
+		</a>
+        <br>
         
         {% if section.settings.instaratings_enabled %}
 		{% include 'instaRatingsProduct' %}
        {% endif %}
 
-        <div id='opinew-stars-plugin-product'>{% include 'opinew_review_stars_product' %}</div>
+        
         {% if section.settings.display_product_vendor %}
           <div class="product-vendor">{{ product.vendor | link_to_vendor }}</div>
         {% endif %}
@@ -90,20 +100,24 @@
             <div class="product__price__wrap">
               {% if product.compare_at_price_max > product.price %}
                 <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
-                <s id="ComparePrice">
+                <s id="ComparePrice" style="font-size: 35px;">
                   <span class="money">{{ current_variant.compare_at_price | money }}</span>
                 </s>
+              <div style="display: inline; position: relative; right: 0px; width: 400px; margin-left: 66px;"><span>On Sale: </span>
               {% endif %}
 
               <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-              <span id="ProductPrice" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+              <span id="ProductPrice" style="color: #99311A; border-right: 1px solid lightgrey; padding-right: 10px;" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
                 <span class="money">{{ current_variant.price | money }}</span>
               </span>
+                <p style="position: absolute; right: 0px; top: 15px; border-right: 1px solid lightgrey; padding-right: 10px;">{% if product.compare_at_price_max > product.price %}You save <span class='money'>{{ product.compare_at_price_max | minus: product.price | money}}</span>{% endif %}</p>
+                <p style="position: absolute; right: 0px; top: 35px; border-right: 1px solid lightgrey; padding-right: 10px;">{% if product.compare_at_price_max > product.price %}Free Shipping{% endif %}</p>
             </div>
-            <div style="margin: 0 0 20px 0">
-            	{% if product.compare_at_price_max > product.price %}You save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}% (<span class='money'>${{ product.compare_at_price_max | minus: product.price | money_without_currency}}</span>){% endif %}
             </div>
-            <div class="product__variants__wrap">
+            <br>
+            <br>
+            <div class="product__variants__wrap" style="border-top: 1px solid lightgrey;">
+              <br>
               <div class="product__variants_no-js">
                 <select name="id" id="productSelect" class="product-single__variants">
                   {% for variant in product.variants %}
@@ -134,13 +148,20 @@
             
             <div class="shake">
             <button type="submit" name="add" id="AddToCart" class="btn from-bottom" style="width: 100%;">
-              <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+              <span id="AddToCartText" style="position: relative; z-index:15";>{{ 'products.product.add_to_cart' | t }}</span>
             </button>
         	</div>
             
             <!--set name of cookie to be different per product
             <script> var cookieName = {{product.id}}; </script>-->
             
+            
+            
+            
+{% if product.tags.size < 1 %}
+      <div class="progressbar below"></div>
+      <hr>          
+{% endif %}
 <!--- For loop to check all tags, in order to assign countdowns/timers --->
 {% for tag in product.tags %}          
             
@@ -148,110 +169,7 @@
           <!-------------------  Start COMBO COUNTDOWN Timer ------------------->
 {% if tag contains 'hot' %}
       <div class="progressbar below"></div>
-      <!--<div class="countdown clearfix">
-              <span id="countdown"></span>
-            <p class="countdown-message">This sale ends soon!</p>
-    </div>-->
       <hr>
-
-      <script>
-var myCookie = "random_543574";
-function getRandomizer(bottom, top) {
-    return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
-}
-
-function setCookie(cname, cvalue, seconds) {
-    var d = new Date();
-    d.setTime(d.getTime() + (seconds * 100));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
-
-
-var product_timer_top_text_enable = true;
-var product_progressbar_enable = true;
-if(!progressbar_message) var progressbar_message = "[num] in stock";
-var percentage=80;
-var totalStock=100;
-var prevStock = 0;
-
-var rollDie = parseInt(getCookie(myCookie));
-if(!rollDie) rollDie = getRandomizer(8,24);
-
-function showStock() {
-
-
-  if(rollDie >= 19) rollDie = rollDie - getRandomizer(0, 1);
-  else if(rollDie >= 13) rollDie = rollDie - getRandomizer(0, 1);
-  else if(rollDie >= 6) rollDie = rollDie - getRandomizer(0, 1); //rollDie-(0.0005*(rollDie-4)*(rollDie-4));
-
-  var intRollDie = parseInt(rollDie);
-
-  if (prevStock != intRollDie) {
-
-    setCookie(myCookie, intRollDie, 24*60*60);
-
-    var percentagetoshow = parseInt(intRollDie/totalStock*100);
-      var html = '';
-      if(product_timer_top_text_enable) html += '<p class="limited_edt"><span>'+ progressbar_message.replace('[num]', '<span class="num">'+intRollDie+'</span>') +'</span></p>';
-      //if(product_progressbar_enable) html += '<div class="meter red"><div class="inside" style="width: '+percentagetoshow+'%"></div></div>';
-      $('.progressbar').html(html);
-        if (prevStock > 0) {
-          $('.progressbar span.num').addClass('flash');
-          setTimeout(function () {
-              $('.progressbar span.num').removeClass('flash');
-          }, 1500);
-        }
-        prevStock = intRollDie;
-  }
-}
-
-showStock(); //#ms interval between updating stock counter
-if(rollDie >= 19) setInterval(showStock, getRandomizer(103920, 172930));
-  else if(rollDie >= 13) setInterval(showStock, getRandomizer(123920, 192930));
-  else if(rollDie >= 6) setInterval(showStock, getRandomizer(133920, 212930));
-
-
-  var time_left = parseInt("119432");
-  var target_date = parseInt(getCookie("timer_7963458115")) || new Date().getTime()/1000 + time_left;
-
-  setCookie("timer_7963458115", target_date, 24*60*60);
-
-setInterval(function () {
-  var days, hours, minutes, seconds;
-
-  var current_time = new Date().getTime()/1000;
-  var seconds_left = target_date - current_time;
-  if(seconds_left <= 0){
-    target_date = new Date().getTime()/1000 + time_left;
-    seconds_left = target_date - current_time;
-    
-    
-      setCookie("timer_7963458115", target_date, 24*60*60);
-    
-  }
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-
-    $('#countdown').html('<div class="counting">'+days+'<span>Days</span></div><div class="counting">'+hours+'<span>Hours</span></div><div class="counting">'+minutes+'<span>Minutes</span></div><div class="counting">'+seconds+'<span>Seconds</span></div>');
-  }, 1000);
-</script>
 {% endif %}
 <!------------------- End COMBO COUNTDOWN Timer ------------------->
           
@@ -264,106 +182,6 @@ setInterval(function () {
 {% if tag contains 'clearance' %}
       <div class="progressbar below"></div>
       <hr>
-
-      <script>
-function getRandomizer(bottom, top) {
-    return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
-}
-
-function setCookie(cname, cvalue, seconds) {
-    var d = new Date();
-    d.setTime(d.getTime() + (seconds * 1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
-
-
-var product_timer_top_text_enable = true;
-var product_progressbar_enable = true;
-if(!progressbar_message) var progressbar_message = "[num] IN STOCK";
-var percentage=80;
-var totalStock=100;
-var prevStock = 0;
-
-var rollDie = parseInt(getCookie("random_7963458113"));
-if(!rollDie) rollDie = getRandomizer(8,34);
-
-function showStock() {
-    
- 
-  if(rollDie >= 24) rollDie = rollDie - getRandomizer(0, 2);
-  else if(rollDie >= 19) rollDie = rollDie - getRandomizer(0, 1);
-  else if(rollDie >= 13) rollDie = rollDie - getRandomizer(0, 1);
-  else if(rollDie >= 6) rollDie = rollDie - getRandomizer(0, 1); //rollDie-(0.0005*(rollDie-4)*(rollDie-4));
-
-  var intRollDie = parseInt(rollDie);
-
-  if (prevStock != intRollDie) {
-
-    setCookie("random_7963458113", intRollDie, 24*60*60);
-
-    var percentagetoshow = parseInt(intRollDie/totalStock*100);
-      var html = '';
-      if(product_timer_top_text_enable) html += '<p class="limited_edt"><span>'+ progressbar_message.replace('[num]', '<span class="num">'+intRollDie+'</span>') +'</span></p>';
-      //if(product_progressbar_enable) html += '<div class="meter red"><div class="inside" style="width: '+percentagetoshow+'%"></div></div>';
-      $('.progressbar').html(html);
-        if (prevStock > 0) {
-          $('.progressbar span.num').addClass('flash');
-          setTimeout(function () {
-              $('.progressbar span.num').removeClass('flash');
-          }, 1500);
-        }
-        prevStock = intRollDie;
-  }
-}
-
-showStock();
-  if(rollDie >= 19) setInterval(showStock, getRandomizer(103920, 172930));
-  else if(rollDie >= 13) setInterval(showStock, getRandomizer(123920, 192930));
-  else if(rollDie >= 6) setInterval(showStock, getRandomizer(133920, 212930));
-
-
-
-  var time_left = parseInt("10800");
-  var target_date = parseInt(getCookie("timer_7963458115")) || new Date().getTime()/1000 + time_left;
-
-  setCookie("timer_7963458115", target_date, 24*60*60);
-
-setInterval(function () {
-  var days, hours, minutes, seconds;
-
-  var current_time = new Date().getTime()/1000;
-  var seconds_left = target_date - current_time;
-  if(seconds_left <= 0){
-    target_date = new Date().getTime()/1000 + time_left;
-    seconds_left = target_date - current_time;
-    
-    
-      setCookie("timer_7963458115", target_date, 24*60*60);
-    
-  }
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-
-    $('#countdown').html('<div class="counting">'+days+'<span>Days</span></div><div class="counting">'+hours+'<span>Hours</span></div><div class="counting">'+minutes+'<span>Minutes</span></div><div class="counting">'+seconds+'<span>Seconds</span></div>');
-  }, 1000);
-</script>
 {% endif %}
 <!------------------- End CLEARANCE SALE Stock ------------------->
           
@@ -375,65 +193,12 @@ setInterval(function () {
           
 <!-------------------  Start LIMITED TIME SALE Timer ------------------->
 {% if tag contains 'limited' %}
+            <div class="progressbar below"></div>
       <div class="countdown clearfix">
               <span id="countdown"></span>
             <p class="countdown-message">Sale is on for a limited time only!</p>
     </div>
       <hr>
-
-      <script>
-
-function setCookie(cname, cvalue, seconds) {
-    var d = new Date();
-    d.setTime(d.getTime() + (seconds * 1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
-
-
-var product_timer_top_text_enable = true;
-
-
-  var time_left = parseInt("248849");
-  var target_date = parseInt(getCookie("timer_7963458115")) || new Date().getTime()/1000 + time_left;
-
-  setCookie("timer_7963458115", target_date, 24*60*60);
-
-setInterval(function () {
-  var days, hours, minutes, seconds;
-
-  var current_time = new Date().getTime()/1000;
-  var seconds_left = target_date - current_time;
-  if(seconds_left <= 0){
-    target_date = new Date().getTime()/1000 + time_left;
-    seconds_left = target_date - current_time;
-    
-    
-      setCookie("timer_7963458115", target_date, 24*60*60);
-    
-  }
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-
-    $('#countdown').html('<div class="counting">'+days+'<span>Days</span></div><div class="counting">'+hours+'<span>Hours</span></div><div class="counting">'+minutes+'<span>Minutes</span></div><div class="counting">'+seconds+'<span>Seconds</span></div>');
-  }, 1000);
-</script>
 {% endif %}
 <!------------------- End LIMITED TIME SALE Timer ------------------->
 {% endfor %}             
@@ -500,9 +265,7 @@ setInterval(function () {
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
         {% endif %}
         
-        {% comment %} Remove Comments and add another '{' '}' on each end of that line
-    	{{ 'logo.png' | asset_url }}
-    	{% endcomment %}
+        
         <!-------------------  Start PEOPLE VIEWING COUNTER ------------------->
       <div class="peopleViewing below"></div>
       <hr>
@@ -631,3 +394,5 @@ setInterval(showViewStock, getViewRandomizer(1692, 12293));
   ]
 }
 {% endschema %}
+
+	<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
